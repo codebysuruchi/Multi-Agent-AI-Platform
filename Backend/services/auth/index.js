@@ -7,6 +7,7 @@ dotenv.config();
 const port=process.env.PORT
 
 const app=express();
+app.arguments(express.json());
 
 app.get('/',(req,res)=>{
     res.json({message: "Hello from auth services"});
